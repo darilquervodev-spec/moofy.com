@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Support — Moofy</title>
+<meta name="description" content="Get help with Moofy — contact support, browse troubleshooting steps, and find answers to common questions." />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6z" fill="#0a0e1a" /></svg></span>
+      Moofy
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="delete-account.html">Delete Data</a></li>
+    </ul>
+    <div class="nav-cta"><a class="btn btn-primary" href="index.html#download">Get the App</a></div>
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+    </button>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <h1>We're here to help</h1>
+    <p class="updated" style="font-family:inherit;font-size:16px;color:var(--text-muted)">Reach out any time — a real person reads every message.</p>
+  </div>
+</header>
+
+<!-- ==========================================================================
+     QUICK CONTACT OPTIONS
+     ========================================================================== -->
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="contact-card-grid">
+      <div class="contact-card" data-reveal>
+        <div class="icon-badge" style="background:rgba(59,130,246,0.14)"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M22 6l-10 7L2 6"/><path d="M2 6h20v12H2z"/></svg></div>
+        <h4>Email support</h4>
+        <p><a class="inline-link" href="mailto:support@moofy.app">support@moofy.app</a></p>
+      </div>
+      <div class="contact-card" data-reveal>
+        <div class="icon-badge" style="background:rgba(251,146,60,0.14)"><svg viewBox="0 0 24 24" fill="none" stroke="#fb923c" stroke-width="2"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></div>
+        <h4>Average response time</h4>
+        <p>Within 1–2 business days</p>
+      </div>
+      <div class="contact-card" data-reveal>
+        <div class="icon-badge" style="background:rgba(52,211,153,0.14)"><svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h4>App version</h4>
+        <p>Find it under Settings → About in the app</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     CONTACT FORM (HTML only — no backend wired up, see main.js comment)
+     ========================================================================== -->
+<section id="contact-form">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="kicker">Contact us</div>
+      <h2>Send us a message</h2>
+      <p>Fill out the form and we'll get back to you at the email you provide.</p>
+    </div>
+
+    <div style="max-width:640px;margin:0 auto" data-reveal>
+      <form class="form-card" id="contact-form-el" novalidate>
+        <div class="form-two-col">
+          <div class="form-row">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+          </div>
+          <div class="form-row">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic" required>
+            <option value="" disabled selected>Select a topic</option>
+            <option value="bug">Report a bug</option>
+            <option value="feature">Feature request</option>
+            <option value="account">Account issue</option>
+            <option value="billing">Billing question</option>
+            <option value="other">Something else</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us what's going on — the more detail, the faster we can help." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Send message</button>
+
+        <p class="form-row hint" style="margin-top:14px;margin-bottom:0;">
+          This form doesn't send anywhere yet — it's a static HTML template. Connect the
+          <code class="mono">&lt;form&gt;</code> to a form-backend service, or wire up your own
+          endpoint, to start actually receiving messages. See the comment at the top of
+          <code class="mono">initContactForm()</code> in <code class="mono">assets/js/main.js</code>.
+        </p>
+
+        <div class="form-status" id="contact-status" role="status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     TROUBLESHOOTING FAQ
+     ========================================================================== -->
+<section style="background:var(--bg-elevated)">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="kicker">Troubleshooting</div>
+      <h2>Common issues &amp; fixes</h2>
+      <p>Try these first — most issues are resolved in under a minute.</p>
+    </div>
+
+    <div class="faq-list" data-reveal>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          The app won't open or keeps crashing
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Force-quit the app and reopen it. If that doesn't help, restart your device, then check
+          the App Store or Google Play for a pending update. If the app still won't open, contact
+          support with your device model and OS version so we can investigate.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          My data isn't syncing across devices
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Confirm both devices are connected to the internet and signed in to the same account.
+          Pull down on the main screen to force a manual refresh. Sync can occasionally take a few
+          minutes — if it's been longer than that, try signing out and back in.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          I enabled App Lock and can't get back in
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Moofy has no separate password — App Lock uses your device's own Face ID, Touch ID, or
+          passcode. If Face ID/Touch ID isn't working, iOS automatically falls back to your device
+          passcode. If you're still stuck, unlocking is handled entirely by iOS, so try restarting
+          your device; contact support if that doesn't help.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          I was charged but can't download or open the app
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Moofy is a single one-time purchase, not a subscription or in-app unlock — there's nothing
+          to "restore." Check your purchase history under your Apple ID (Settings → [your name] →
+          Media &amp; Purchases) to confirm the purchase went through, then try downloading again
+          from the App Store. If it still won't download, contact support and we'll help investigate.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Notifications aren't showing up
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Check that notifications are enabled for the app in your device's system Settings, and
+          that they're also turned on inside the app's own notification preferences.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How do I delete my data?
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Moofy has no accounts — visit our <a class="inline-link" href="delete-account.html">Delete Data</a> page for
+          step-by-step instructions on erasing everything directly in the app.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          None of this fixed my issue — what now?
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Use the <a class="inline-link" href="#contact-form">contact form</a> above or email us
+          directly at <a class="inline-link" href="mailto:support@moofy.app">support@moofy.app</a> —
+          include your device model, OS version, and app version so we can help as quickly as
+          possible.
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Moofy. All rights reserved.</span>
+      <ul style="display:flex;gap:20px;list-style:none;padding:0;margin:0;">
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="delete-account.html">Delete Data</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
